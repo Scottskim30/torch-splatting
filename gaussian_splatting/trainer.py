@@ -135,6 +135,7 @@ class Trainer(object):
     def train(self):
         accelerator = self.accelerator
         device = accelerator.device
+        print(device)
         
         with tqdm(initial = self.step, total = self.train_num_steps, disable = not accelerator.is_main_process) as pbar:
 
